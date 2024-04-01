@@ -41,3 +41,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
     pointer-events: none; /* Allows click-through to the image */
   }
+
+  .image-with-shadow {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Add your desired shadow values here */
+}
