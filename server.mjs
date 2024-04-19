@@ -16,16 +16,6 @@ const db = new pg.Client({
   })
 db.connect();
 
-let user=[];
-db.query("SELECT * FROM users",(err,res)=>{
-  if(err){
-    console.log(err.stack);
-  }else {user = res.rows;
-  console.log(user);
-  }}
-);
-
-
 //Middleware
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"));
@@ -106,36 +96,16 @@ app.get("/epitropes", (req, res) => {
   res.render("./genika/epitropes.ejs");
 });
 
-const dataToInsert = {
-  password: 'Jwerw',
-  email: 'jowewh22n@example.com',
-  secret: "werw",
-};
-// ,[dataToInsert.email,dataToInsert.password,dataToInsert.secret]  ($1,$2,$3)
-// insert
-app.post("/page1",async (req,res)=>{
-  const input = req.body["fname"]
-  console.log(input);
-  // πολύ προσοχή στα queries ακόμα και τα εισαγωγικά μετράνε
-  const result = await db.query(
-  `INSERT INTO users (email,password,secret) VALUES ($1,$2,$3)  RETURNING *`,[dataToInsert.email,dataToInsert.password,dataToInsert.secret],(err, result) => {
-    if (err) {
-      console.error('Error executing query', err);
-      // Handle error
-    } else {
-      console.log('Data inserted successfully:', result.rows[0]);
-      // Handle success
-    }
-  });
-  
-  console.log(input);
-  res.redirect("/page1");
+app.get("/login", (req, res) => {
+  res.render("./login.ejs");
 });
 
+app.get("/register", (req, res) => {
+  res.render("./register.ejs");
+});
 
-
-
-
+app.post("/register", async(req, res)=>{});
+app.post("/login", async(req, res)=>{});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
