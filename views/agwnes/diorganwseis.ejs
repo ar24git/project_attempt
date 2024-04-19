@@ -1,5 +1,5 @@
 <%- include("../partials/header.ejs") %>
-<h1>Diorganwseis</h1>
+<!-- <h1 class="mt-sm-3">Διοργανώσεις</h1> -->
 <!-- <section class="container">
     <h3 class="pt-4 pb-2">Bootstrap Datepicker</h3>
     <form>
@@ -20,12 +20,13 @@
 </section> -->
 
 <!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
-<section class="container mb-2 border">
+<section class="container mb-2 mt-2 border">
     
     <form class="mt-2">
-            <label for="date">Ημερομηνία</label>
+            
             <div class="row form-group">
                 <div class="col-lg-3">
+                    <label for="date">Ημερομηνία</label>
                     <div class="input-group date" id="datepicker">
                         <input type="text" class="form-control">
                         <span class="input-group-append">
@@ -35,8 +36,13 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    Another Filter..
+                <div class="col-lg-3 mt-2">
+                    <label for="">Αγωνιστική</label>  
+                    <input type="text">
+                </div>
+                <div class="allign-items-end mt-3">
+                    <button class="btn btn-secondary">Εκκαθάριση</button>
+                    <button class="btn btn-success">Έυρεση</button>
                 </div>
             </div>
     </form>
