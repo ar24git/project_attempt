@@ -2,6 +2,15 @@
 /////data will be retrieved though a function later
 /// for now we try to built a table 
 
+// datepicker
+$(document).ready(function(){
+    $('#datepicker').datepicker();
+});
+
+
+
+
+
 var title = "Α ΚΑΤΗΓΟΡΙΑ 1ος Όμιλος (25η αγωνιστική)";
 ////as if we already retrieved the data
 
