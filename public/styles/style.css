@@ -50,3 +50,22 @@ body {
 .dropdown-item.active, .dropdown-item:active {
   background-color: green !important; /* Replace "your-color" with your desired color */ 
 }
+
+
+/* datepicker */
+/* Increase the size of the datepicker */
+.datepicker {
+  font-size: 16px; /* Adjust the font size */
+}
+
+/* Increase the size of the days in the datepicker */
+.datepicker td, .datepicker th {
+  padding: 10px; /* Adjust the padding */
+}
+
+/* Increase the size of the month and year headers */
+.datepicker th.datepicker-switch {
+  font-size: 18px; /* Adjust the font size */
+  padding-top: 10px; /* Adjust the padding */
+  padding-bottom: 10px; /* Adjust the padding */
+}
