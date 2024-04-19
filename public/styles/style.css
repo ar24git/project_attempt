@@ -45,3 +45,8 @@ body {
   .image-with-shadow {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Add your desired shadow values here */
 }
+
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: green !important; /* Replace "your-color" with your desired color */ 
+}
