@@ -25,8 +25,8 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/page1", (req, res) => {
-  res.render("page1.ejs");
+app.get("/admin", (req, res) => {
+  res.render("admin.ejs");
 });
 
 app.get("/page2", (req, res) => {
