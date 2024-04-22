@@ -1,6 +1,11 @@
 <%- include("partials/header.ejs") %>
 
-<input type="checkbox" id="dark-mode-toggle">
+<!-- <input type="checkbox" id="dark-mode-toggle" class=""  checked data-bs-toggle="toggle"> -->
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="dark-mode-toggle" data-bs-toggle="toggle">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
 
 <div class="img-container mt-2">
     <img src="/media/main.jpg" class="img-fluid image-with-shadow" alt="">
