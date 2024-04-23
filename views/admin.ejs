@@ -1,62 +1,9 @@
 <%- include("partials/header.ejs") %>
 
 
-  
 
-
-
-
-
-  <div class="container">
-    <div class="row flex-lg-column">
-      <div class="col-md-3">
-        <!-- Sidebar content -->
-        Sidebar
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex flex-column">
-            <a class="navbar-brand" href="#">Your Brand</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto d-flex flex-column">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <!-- Add more menu items here -->
-              </ul>
-            </div>
-          </nav>
-      </div>
-      <div class="col-md-9">
-        <!-- Main content -->
-        Main Content
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg">
+<!-- change the navbar-exapnd-{} to chnage sreen width it expands -->
+<nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Διαχείριση</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,52 +26,57 @@
   </nav>
 
   <div class="container-fluid">
-    <div class="row  d-flex flex-column">
+    <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block  sidebar navbar navbar-expand-lg ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="position-sticky collapse navbar-collapse" id="sidebar">
-          <ul class="nav flex-column">
+        <div class="row  d-flex flex-column">
+          <div class="ms-auto ">
+              agwnas
+              <button class="navbar-toggler ms-sm-auto " type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          </div>
+          <div class="position-sticky collapse navbar-collapse" id="sidebar">
+            <ul class="nav flex-column">
+            
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <span data-feather="home"></span>
+                  Αγώνας
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file"></span>
+                  Ομάδα
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Άτομο
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Ανακοίνωση
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>
+            </ul>
+          </div>
           
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <span data-feather="home"></span>
-                Αγώνας
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file"></span>
-                Ομάδα
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Άτομο
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Ανακοίνωση
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                Reports
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="layers"></span>
-                Integrations
-              </a>
-            </li>
-          </ul>
-        </div>
       </nav>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -176,6 +128,7 @@
           </div> -->
         </div>
       </main>
+    </div>
     </div>
   </div>
 
