@@ -10,6 +10,58 @@ $(document).ready(function(){
 });
 
 
+//hide inputs if checkboxes arent checked
+var form = $('#diorganwseis-filter'),
+checkbox = $('#agwnistikh'),
+checkboxBlock = $('#changeAgwnistikh');
+
+checkboxBlock.hide();
+
+checkbox.on('click', function() {
+   if($(this).is(':checked')) {
+      checkboxBlock.show();
+      checkboxBlock.find('input').attr('required', true);
+   } else {
+      checkboxBlock.hide();
+      checkboxBlock.find('input').attr('required', false);
+   }
+});
+
+
+var form2 = $('#diorganwseis-filter'),
+checkbox2 = $('#kathgoria'),
+checkboxBlock2 = $('#changeKathgoria');
+
+checkboxBlock2.hide();
+
+checkbox2.on('click', function() {
+   if($(this).is(':checked')) {
+      checkboxBlock2.show();
+      checkboxBlock2.find('input').attr('required', true);
+   } else {
+      checkboxBlock2.hide();
+      checkboxBlock2.find('input').attr('required', false);
+   }
+});
+
+var form3 = $('#diorganwseis-filter'),
+checkbox3 = $('#hmeromhnia'),
+checkboxBlock3 = $('#datepicker');
+
+checkboxBlock3.hide();
+
+checkbox3.on('click', function() {
+   if($(this).is(':checked')) {
+      checkboxBlock3.show();
+      checkboxBlock3.find('input').attr('required', true);
+   } else {
+      checkboxBlock3.hide();
+      checkboxBlock3.find('input').attr('required', false);
+   }
+});
+
+
+
 //the following is not used | just for production
 var title = "Α ΚΑΤΗΓΟΡΙΑ 1ος Όμιλος (25η αγωνιστική)";
 ////as if we already retrieved the data
