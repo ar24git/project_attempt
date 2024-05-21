@@ -37,16 +37,21 @@ router.get("/", (req, res) => {
     res.render("./agwnes/poines.ejs");
   });
   
-  const data = {
-    match: 'Match 1',
+  const match = {
+    name: 'Match 1',
     pitch: 'Pitch A',
     date: '2024-05-21',
     time: '14:00',
     referee: 'Referee 1',
     result: '2-1'
   };
+
+  const matches = [];
+  matches.push(match);
+  matches.push(match);
+  
   router.get("/diorganwseis", (req, res) => {
-    res.render("./agwnes/diorganwseis.ejs", data);
+    res.render("./agwnes/diorganwseis.ejs",  {matches: matches});
   });
   
   router.get("/statistika", (req, res) => {

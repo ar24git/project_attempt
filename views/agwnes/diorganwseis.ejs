@@ -53,13 +53,19 @@
 </section>
 
 <div id="table-container">
-<%=match%>
-<%=pitch%>
-<%=date%>
-<%=time%>
-<%=referee%>
-<%=result%>
+    <% matches.map((match)=>{ %>
+ 
+        <%= match.name %>
+        <%= match.pitch %>
+        <%= match.date %>
+        <%= match.time %>
+        <%= match.referee %>
+        <%= match.result %>
+
+<% }) %>
 </div>
+
+
 
 
 
