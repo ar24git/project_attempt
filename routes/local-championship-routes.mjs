@@ -37,8 +37,16 @@ router.get("/", (req, res) => {
     res.render("./agwnes/poines.ejs");
   });
   
+  const data = {
+    match: 'Match 1',
+    pitch: 'Pitch A',
+    date: '2024-05-21',
+    time: '14:00',
+    referee: 'Referee 1',
+    result: '2-1'
+  };
   router.get("/diorganwseis", (req, res) => {
-    res.render("./agwnes/diorganwseis.ejs");
+    res.render("./agwnes/diorganwseis.ejs", data);
   });
   
   router.get("/statistika", (req, res) => {
