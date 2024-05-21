@@ -52,18 +52,26 @@
     </form>
 </section>
 
-<div id="table-container">
-    <% matches.map((match)=>{ %>
- 
-        <%= match.name %>
-        <%= match.pitch %>
-        <%= match.date %>
-        <%= match.time %>
-        <%= match.referee %>
-        <%= match.result %>
 
-<% }) %>
-</div>
+<table class="table table-striped table-responsive">
+    <caption class="caption-top">${title}</caption>
+    <tr><th>Αγώνας</th>
+        <th>Γήπεδο</th>
+        <th>Ημερομηνία</th>
+        <th>'Ωρα</th>
+        <th>Διαιτητής</th>
+        <th>Αποτέλεσμα</th>
+    <% matches.map((match)=>{ %>
+    <tr><td><%= match.name %></td>
+        <td><%= match.pitch %></td>
+        <td><%= match.date %></td>
+        <td><%= match.time %></td>
+        <td><%= match.referee %></td>
+        <td><%= match.result %></td></tr>
+        <% }) %>
+    
+
+
 
 
 
