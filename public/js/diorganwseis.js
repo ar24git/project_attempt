@@ -1,13 +1,42 @@
 /////////initializing test data 
 /////data will be retrieved though a function later
 /// for now we try to built a table 
-
-// datepicker
 $(document).ready(function(){
-    $('#datepicker').datepicker({
-        language: 'el'
+    // Initialize the datepickers for date range selection
+    $('#start-date').datepicker({
+        format: 'yyyy-mm-dd',
+        language: 'el',
+        autoclose: true,
+        todayHighlight: false
+    }).on('changeDate', function (selected) {
+        var startDate = new Date(selected.date.valueOf());
+        $('#end-date').datepicker('setStartDate', startDate);
+    });
+
+    $('#end-date').datepicker({
+        format: 'yyyy-mm-dd',
+        language: 'el',
+        autoclose: true,
+        todayHighlight: false
+    }).on('changeDate', function (selected) {
+        var endDate = new Date(selected.date.valueOf());
+        $('#start-date').datepicker('setEndDate', endDate);
     });
 });
+
+
+
+
+
+
+
+// datepicker
+// $(document).ready(function(){
+//     $('#datepicker').datepicker({
+//         multidate: true,
+//         language: 'el'
+//     });
+// });
 
 
 //hide inputs if checkboxes arent checked
