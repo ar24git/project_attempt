@@ -25,7 +25,15 @@ $(document).ready(function(){
 });
 
 
+const resetButton = document.getElementById("resetButtonDiorganwseis");
+  resetButton.addEventListener("click", function() {
+    // Clear specific form elements
+    document.getElementById("nameInput").value = "";
+    document.getElementById("emailInput").value = "";
 
+    // Alternatively, reset the entire form using JavaScript
+    document.getElementById("diorganwseis-filter").reset();
+  });
 
 
 

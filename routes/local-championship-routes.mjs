@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-
+router.use(express.urlencoded({extended:true}))
 //Get Homepage
 router.get("/", (req, res) => {
     res.render("index.ejs");
@@ -121,5 +121,16 @@ router.get("/", (req, res) => {
     const password = req.body.password;
   
   });
+
+  let diorganwseisFilter =  function(req,res) {
+    const startDate  = req.query.startDate;
+    const endDate = req.query.endDate;
+    const kathgoria = req.query.kathgoria;
+    const agwnistikh = req.query.agwnistikh;
+    console.log(startDate);
+    res.render('./agwnes/diorganwseis', {matches:matches});
+  }
+
+  router.route('/diorganwseis-filter').get(diorganwseisFilter);
 
   export default router;

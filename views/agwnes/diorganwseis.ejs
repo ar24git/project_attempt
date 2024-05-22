@@ -24,16 +24,16 @@
 
 <section class="container mb-2 mt-2 border">
     
-    <form class="mt-2" id="diorganwseis-filter">
+    <form class="mt-2" id="diorganwseis-filter" action="/diorganwseis-filter" method="get">
             
             <div class="row form-group">
                 <div class="col-lg-3">
-                    <input type="checkbox" class="btn-check" id="hmeromhnia" autocomplete="off">
+                    <input type="checkbox" class="btn-check" name="hmeromhniaCheck"  id="hmeromhnia" autocomplete="off">
                     <label class="btn btn-outline-primary" for="hmeromhnia">Ημερομηνία</label>
                     <div class="input-group date mb-3 mb-lg-1" id="datepicker">
                         <div class="mb-0">
                             <div class="input-group date mb-0" id="start-date">
-                                <input type="text" class="form-control">
+                                <input type="text" name="startDate" class="form-control">
                                 <span class="input-group-append">
                                     <span class="input-group-text">
                                         <i class="fa fa-calendar"></i>
@@ -46,7 +46,7 @@
                                 <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
                               </svg></label>
                             <div class="input-group date" id="end-date">
-                                <input type="text" class="form-control">
+                                <input type="text" name="endDate" class="form-control">
                                 <span class="input-group-append">
                                     <span class="input-group-text">
                                         <i class="fa fa-calendar"></i>
@@ -58,9 +58,9 @@
                 </div>
                
                 <div class="col-lg-2 ">
-                    <input type="checkbox" class="btn-check" id="agwnistikh" autocomplete="off">
+                    <input type="checkbox" class="btn-check" name="agwnistikhCheck" id="agwnistikh" autocomplete="off">
                     <label class="btn btn-outline-primary" for="agwnistikh">Αγωνιστική</label>
-                    <select class="form-control mb-3 mb-lg-1" id="changeAgwnistikh">
+                    <select class="form-control mb-3 mb-lg-1" name="agwnistikh" id="changeAgwnistikh">
                         <!-- options will be fetched from database -->
                         <option>1</option>
                         <option>2</option>
@@ -71,13 +71,13 @@
                 </div>
 
                 <div class="col-lg-2 ">
-                    <input type="checkbox" class="btn-check" id="kathgoria" autocomplete="off">
+                    <input type="checkbox" class="btn-check" name="kathgoriaCheck" id="kathgoria" autocomplete="off">
                     <label class="btn btn-outline-primary" for="kathgoria">Κατηγορία</label>  
-                    <input class="form-control mb-3 mb-lg-1" type="text" id="changeKathgoria">
+                    <input class="form-control mb-3 mb-lg-1" name="kathgoria" type="text" id="changeKathgoria">
                 </div>
                 <div class="allign-items-end mt-3">
-                    <button class="btn btn-secondary">Εκκαθάριση</button>
-                    <button class="btn btn-success">Έυρεση</button>
+                    <button class="btn btn-secondary" id="resetButtonDiorganwseis">Εκκαθάριση</button>
+                    <button class="btn btn-success" type="submit">Έυρεση</button>
                 </div>
             </div>
     </form>
