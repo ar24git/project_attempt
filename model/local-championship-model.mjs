@@ -1,7 +1,6 @@
 import pg from "pg";
 import env from "dotenv";
 
-const app = express();
 
 env.config();
 
@@ -18,3 +17,19 @@ try{
 } catch (error){
     throw Error('Failure connecting to database');
 }
+
+  export let getAllMatches = async() =>{
+    const match = {
+        name: 'Match 1',
+        pitch: 'Pitch A',
+        date: '2024-05-21',
+        time: '14:00',
+        referee: 'Referee 1',
+        result: '2-1'
+      };
+    
+    const matches = [];
+      matches.push(match);
+      matches.push(match);
+    return matches;
+  }

@@ -1,4 +1,7 @@
 import express from 'express';
+
+import * as diorganwseisController from "../controller/diorganwseis-controller.mjs"
+
 const router = express.Router();
 
 router.use(express.urlencoded({extended:true}))
@@ -122,15 +125,6 @@ router.get("/", (req, res) => {
   
   });
 
-  let diorganwseisFilter =  function(req,res) {
-    const startDate  = req.query.startDate;
-    const endDate = req.query.endDate;
-    const kathgoria = req.query.kathgoria;
-    const agwnistikh = req.query.agwnistikh;
-    console.log(startDate);
-    res.render('./agwnes/diorganwseis', {matches:matches});
-  }
-
-  router.route('/diorganwseis-filter').get(diorganwseisFilter);
+  router.route('/diorganwseis-filter').get(diorganwseisController.diorganwseisFilter);
 
   export default router;
