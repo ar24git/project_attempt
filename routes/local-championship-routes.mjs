@@ -143,4 +143,18 @@ router.get("/", (req, res) => {
 
   router.route('/diorganwseis-filter').get(diorganwseisController.diorganwseisFilter);
 
+  router.get("/admin/agwnas/addAgwnas", (req,res) =>{
+    res.render("./admin/addAgwnas.ejs");
+  });
+
+  router.get("/admin/agwnas/alterAgwnas", (req,res) =>{
+    res.render("./admin/alterAgwnas.ejs");
+  });
+
+  router.get("/admin/agwnas/deleteAgwnas", (req,res) =>{
+    res.render("./admin/deleteAgwnas.ejs");
+  });
+
+
+
   export default router;
