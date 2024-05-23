@@ -125,6 +125,22 @@ router.get("/", (req, res) => {
   
   });
 
+  router.get("/admin/agwnas", (req,res) =>{
+    res.render("./admin/agwnas.ejs");
+  });
+
+  router.get("/admin/atomo", (req,res) =>{
+    res.render("./admin/atomo.ejs");
+  });
+
+  router.get("/admin/omada", (req,res) =>{
+    res.render("./admin/omada.ejs");
+  });
+
+  router.get("/admin/anakoinwsh", (req,res) =>{
+    res.render("./admin/anakoinwsh.ejs");
+  });
+
   router.route('/diorganwseis-filter').get(diorganwseisController.diorganwseisFilter);
 
   export default router;
