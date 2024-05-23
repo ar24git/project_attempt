@@ -8,6 +8,25 @@
   <h1 class="h2">Προσθήκη Αγώνα</h1>
 </div>
 
+<form action="/admin/addAgwnas/proccess" method="post" id="addAgwnasForm">
+
+
+    <label for="omada1AddAgwnas" >Γηπεδούχος Ομάδα</label>
+    <input type="text" class="form-control" name="omada1" id="omada1AddAgwnas">
+    <label for="omada2AddAgwnas"  >Φιλοξενούμενη Ομάδα</label>
+    <input type="text" class="form-control" name="omada2" id="omada2AddAgwnas">
+    <label for="ghpedoAddAgwnas"  >Γήπεδο</label>
+    <input type="text" class="form-control" name="ghpedo" id="ghpedoAddAgwnas">
+    <label for="hmeromhniaAddAgwnas">Ημερομηνία</label>
+    <input type="text" class="form-control" name="hmeromhnia" id="hmeromhniaAddAgwnas">
+    <label for="wraAddAgwnas">Ώρα</label>
+    <input type="text" class="form-control" name="wra" id="wraAddAgwnas">
+    <label for="diaiththsAddAgwnas">Διαιτητής</label>
+    <input type="text" class="form-control" name="diaithths" id="diaiththsAddAgwnas">
+    <label for="apotelesmaAddAgwnas">Αποτέλεσμα</label>
+    <input type="text" class="form-control" name="apotelesma" id="apotelesmaAddAgwnas">
+    <button type="submit" class="btn btn-success mt-2" >Προσθήκη</button>
+</form>
 
 <%- include("../partials/dashboardFooter.ejs")  %>
   
