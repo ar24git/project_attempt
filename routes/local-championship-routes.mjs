@@ -1,6 +1,7 @@
 import express from 'express';
 
 import * as diorganwseisController from "../controller/diorganwseis-controller.mjs"
+import * as adminController from "../controller/admin-controller.mjs"
 
 const router = express.Router();
 
@@ -142,6 +143,8 @@ router.get("/", (req, res) => {
   });
 
   router.route('/diorganwseis-filter').get(diorganwseisController.diorganwseisFilter);
+
+  router.route('/admin/agwnas/addAgwnas/proccess').post(adminController.addAgwnas);
 
   router.get("/admin/agwnas/addAgwnas", (req,res) =>{
     res.render("./admin/addAgwnas.ejs");

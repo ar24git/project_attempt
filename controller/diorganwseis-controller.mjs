@@ -1,4 +1,3 @@
-import mod from "from";
 import * as model from "../model/local-championship-model.mjs"
 
 export async function diorganwseisFilter(req,res) {
