@@ -36,8 +36,10 @@ try{
   }
 
 //will populate database for testing
+//run resetDatabase in postgre
+//and set insertData to true in order to populate db
 import * as populate from "./populateDatabase.mjs"
-const insertData = false;
+const insertData = true;
 if (insertData) {
   populate.insertData();
 }
