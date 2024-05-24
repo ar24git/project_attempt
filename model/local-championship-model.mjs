@@ -34,3 +34,13 @@ try{
       matches.push(match);
     return matches;
   }
+
+//will populate database for testing
+import * as populate from "./populateDatabase.mjs"
+const insertData = false;
+if (insertData) {
+  populate.insertData();
+}
+
+
+  
